@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import BasicButtons from './components/button/Button';
 
-function App() {
+function App (){
   return (
     <div className="App">
       <header className="App-header">
@@ -16,6 +17,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
+          <BasicButtons/>
           Learn React
         </a>
       </header>
