@@ -20,10 +20,15 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import BasicButtons from '../Button/Button';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-import PrimarySearchAppBar from '../AppBar/AppBar';
+
+import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import PaidIcon from '@mui/icons-material/Paid';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 import MenuItem from '@mui/material/MenuItem';
 import Badge from '@mui/material/Badge';
@@ -322,11 +327,11 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Dashboard','Gestion des dépenses', 'Gestion des Revenus', 'Liste des Favoris'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index === 0 ? <DashboardIcon/> : index === 1 ? <PaidIcon/> : index === 2 ? <CurrencyExchangeIcon/> : <FavoriteIcon /> }
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -335,11 +340,11 @@ export default function PersistentDrawerLeft() {
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          {['Paramétres'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <SettingsIcon /> : <SettingsIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
