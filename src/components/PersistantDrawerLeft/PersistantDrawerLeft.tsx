@@ -17,7 +17,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import BasicButtons from '../Button/Button';
 import SettingsIcon from '@mui/icons-material/Settings';
@@ -344,7 +343,7 @@ export default function PersistentDrawerLeft() {
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <SettingsIcon /> : <SettingsIcon />}
+                  {index === 0 ? <SettingsIcon /> : <SettingsIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} />
               </ListItemButton>
@@ -355,12 +354,12 @@ export default function PersistentDrawerLeft() {
       <Main open={open}>
         <DrawerHeader />
         <Typography paragraph>
-          
+          {/* {Table} */}
         </Typography>
         <Typography paragraph>
-        
-        </Typography>
         <BasicButtons/>
+        </Typography>
+       
       </Main>
       {renderMobileMenu}
       {renderMenu}
