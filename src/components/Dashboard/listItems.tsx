@@ -9,11 +9,13 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Link from '@mui/material/Link';
+import Settings from '@mui/icons-material/Settings';
 
 export const mainListItems = (
   <React.Fragment>
-    <Link to="/">
+    <Link href="/"  underline="none" color={'black'}>
         <ListItemButton >
         <ListItemIcon>
             <DashboardIcon />
@@ -21,7 +23,7 @@ export const mainListItems = (
         <ListItemText primary="Dashboard" />
         </ListItemButton>
     </Link>
-    <Link to="/depenses">
+    <Link href="/depenses" underline="none" color={'black'}>
     <ListItemButton>
       <ListItemIcon>
         <ShoppingCartIcon />
@@ -29,7 +31,7 @@ export const mainListItems = (
       <ListItemText primary="Gestion des Dépenses" />
     </ListItemButton>
     </Link>
-    <Link to="/revenu">
+    <Link href="/revenu" underline="none" color={'black'}>
     <ListItemButton>
       <ListItemIcon>
         <PeopleIcon />
@@ -37,7 +39,7 @@ export const mainListItems = (
       <ListItemText primary="Gestion des Revenus" />
     </ListItemButton>
     </Link>
-    <Link to="/rapports">
+    <Link href="/rapports" underline="none" color={'black'}>
     <ListItemButton>
       <ListItemIcon>
         <BarChartIcon />
@@ -45,7 +47,7 @@ export const mainListItems = (
       <ListItemText primary="Rapports" />
     </ListItemButton>
     </Link>
-    <Link to="/favoris">
+    <Link href="/favoris" underline="none" color={'black'}>
     <ListItemButton>
       <ListItemIcon>
         <LayersIcon />
@@ -53,7 +55,6 @@ export const mainListItems = (
       <ListItemText primary="Liste des Farvoris" />
     </ListItemButton>
     </Link>
-
   </React.Fragment>
 );
 
@@ -63,10 +64,12 @@ export const secondaryListItems = (
       Saved reports
     </ListSubheader>
     <ListItemButton>
+    <Settings>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Current month" />
+      </Settings>
+      <ListItemText primary="Parametre" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>

@@ -124,7 +124,7 @@ function DashboardContent(props : DashboardProps) {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Money Wize
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -169,7 +169,6 @@ function DashboardContent(props : DashboardProps) {
 
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              Chart
               <Grid item xs={12} md={8} lg={9}>
                 <Paper
                   sx={{
