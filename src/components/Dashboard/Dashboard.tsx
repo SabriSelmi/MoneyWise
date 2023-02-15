@@ -18,22 +18,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
-// import Chart from './Chart';
-// import Deposits from './Deposits';
-// import Orders from './Orders';
-
-function Copyright(props: any) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const drawerWidth: number = 240;
 
@@ -63,7 +47,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   ({ theme, open }) => ({
     '& .MuiDrawer-paper': {
       position: 'relative',
-      whiteSpace: 'nowrap',
+      whiteSpace: 'normal',
       width: drawerWidth,
       transition: theme.transitions.create('width', {
         easing: theme.transitions.easing.sharp,
@@ -168,21 +152,21 @@ function DashboardContent(props : DashboardProps) {
           <Toolbar />
 
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={8} lg={9}>
+            {/* <Grid container spacing={0}> */}
+              <Grid item xs={12} md={12} lg={12}>
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
-                    flexDirection: 'column',
-                    height: 240,
+                    flexDirection: 'row',
+                    
                   }}
                 >
                   {props.component}
                 </Paper>
               </Grid>  
-            </Grid>
-            <Copyright sx={{ pt: 4 }} />
+            {/* </Grid> */}
+            {/* <Copyright sx={{ pt: 4 }} /> */}
           </Container>
         </Box>
       </Box>

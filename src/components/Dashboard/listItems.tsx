@@ -7,15 +7,17 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
-import AssignmentIcon from '@mui/icons-material/Assignment';
-// import { Link } from 'react-router-dom';
-import Link from '@mui/material/Link';
-import Settings from '@mui/icons-material/Settings';
+import SettingsApplicationsSharpIcon from '@mui/icons-material/SettingsApplicationsSharp';
+import FavoriteBorderSharpIcon from '@mui/icons-material/FavoriteBorderSharp';
+import { Link } from 'react-router-dom';
+
 
 export const mainListItems = (
   <React.Fragment>
-    <Link href="/"  underline="none" color={'black'}>
+    <Link to="/"  style={{
+      textDecoration : "none",
+      color : "black"
+    }} color={'black'}>
         <ListItemButton >
         <ListItemIcon>
             <DashboardIcon />
@@ -23,7 +25,10 @@ export const mainListItems = (
         <ListItemText primary="Dashboard" />
         </ListItemButton>
     </Link>
-    <Link href="/depenses" underline="none" color={'black'}>
+    <Link to="/depenses" style={{
+      textDecoration : "none",
+      color : "black"
+    }} color={'black'}>
     <ListItemButton>
       <ListItemIcon>
         <ShoppingCartIcon />
@@ -31,7 +36,10 @@ export const mainListItems = (
       <ListItemText primary="Gestion des Dépenses" />
     </ListItemButton>
     </Link>
-    <Link href="/revenu" underline="none" color={'black'}>
+    <Link to="/revenu" style={{
+      textDecoration : "none",
+      color : "black"
+    }} color={'black'}>
     <ListItemButton>
       <ListItemIcon>
         <PeopleIcon />
@@ -39,7 +47,10 @@ export const mainListItems = (
       <ListItemText primary="Gestion des Revenus" />
     </ListItemButton>
     </Link>
-    <Link href="/rapports" underline="none" color={'black'}>
+    <Link to="/rapports" style={{
+      textDecoration : "none",
+      color : "black"
+    }} color={'black'}>
     <ListItemButton>
       <ListItemIcon>
         <BarChartIcon />
@@ -47,10 +58,13 @@ export const mainListItems = (
       <ListItemText primary="Rapports" />
     </ListItemButton>
     </Link>
-    <Link href="/favoris" underline="none" color={'black'}>
+    <Link to="/favoris" style={{
+      textDecoration : "none",
+      color : "black"
+    }} color={'black'}>
     <ListItemButton>
       <ListItemIcon>
-        <LayersIcon />
+        <FavoriteBorderSharpIcon />
       </ListItemIcon>
       <ListItemText primary="Liste des Farvoris" />
     </ListItemButton>
@@ -60,28 +74,36 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <React.Fragment>
-    <ListSubheader component="div" inset>
-      Saved reports
+    <ListSubheader 
+    component="div" 
+    inset
+    style={{
+      lineHeight : '30px'
+    }}>
+      Gérer mon profil
     </ListSubheader>
-    <ListItemButton>
-    <Settings>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      </Settings>
-      <ListItemText primary="Parametre" />
-    </ListItemButton>
+    <Link to="/settings" style={{
+      textDecoration : "none",
+      color : "black"
+    }} color={'black'}>
     <ListItemButton>
       <ListItemIcon>
-        <AssignmentIcon />
+        <SettingsApplicationsSharpIcon />
       </ListItemIcon>
-      <ListItemText primary="Last quarter" />
+      <ListItemText primary="Paramètres" />
     </ListItemButton>
+    </Link>
     <ListItemButton>
+      <ListItemIcon>
+      <SettingsApplicationsSharpIcon />
+      </ListItemIcon>
+      <ListItemText primary="Ajouter les dépenses" />
+    </ListItemButton>
+    {/* <ListItemButton>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Year-end sale" />
-    </ListItemButton>
+    </ListItemButton> */}
   </React.Fragment>
 );

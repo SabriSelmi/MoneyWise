@@ -1,3 +1,9 @@
-export default function Depense () {
-    return <h1>Depense</h1>
+import ExpenseForm from '../components/Forms/Form';
+
+export default function Depense() {
+  return (
+    <>
+    <ExpenseForm/>
+    </>
+  );
 }
