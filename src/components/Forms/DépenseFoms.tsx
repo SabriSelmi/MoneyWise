@@ -1,7 +1,7 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
+import { Button } from '@mui/material';
 
 const currencies = [
   {
@@ -25,7 +25,7 @@ export default function SelectTextFields() {
       autoComplete="off"
     >
         <div>
-            Ajouter Vos Charges Fixe 
+            Ajouter vos Charges Fixe 
         </div>
       <div>
         <TextField id="outlined-basic" label="Désignation" variant="outlined" />
@@ -37,7 +37,7 @@ export default function SelectTextFields() {
           select
           label="Select"
           defaultValue="EUR"
-          helperText="Please select your currency"
+          helperText="Dépense fixe ou variables"
         >
           {currencies.map((option) => (
             <MenuItem key={option.value} value={option.value}>
@@ -45,11 +45,9 @@ export default function SelectTextFields() {
             </MenuItem>
           ))}
         </TextField>
-        
-      </div>
-
-      <div>
-        
+        </div>
+              <Button>Submit</Button>
+        <div> 
       </div>
     </Box>
   );

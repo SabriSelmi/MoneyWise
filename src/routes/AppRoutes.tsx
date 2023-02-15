@@ -1,4 +1,3 @@
-import { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DashboardContent from '../components/Dashboard/Dashboard';
 import Depense from '../pages/Depense';
