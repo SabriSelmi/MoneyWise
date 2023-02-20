@@ -12,7 +12,7 @@ build_image:
   before_script:
     - docker login -u $REGISTRY_USER -p $REGISTRY_PASS
   script:
-    - docker-compose build ./compose-app/
+    - docker-compose build ./composer-app/
     - docker push 
 
 
