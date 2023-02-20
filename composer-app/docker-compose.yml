@@ -1,0 +1,5 @@
+version: '3.4'
+services :
+    money-wise-client :
+        image : $REGISTRY_USER/money-wise-client:$VERSION
+        restart : on-failure:3

@@ -1,0 +1,10 @@
+version: '3.4'
+
+services :
+    money-wise-client :
+        build:
+            context : ../frontend
+            dockerfile: Dockerfile
+            args :
+                PROJECT : money-wise-client
+            target : ${ENVIRONMENT}

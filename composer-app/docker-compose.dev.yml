@@ -1,0 +1,6 @@
+version: '3.4'
+
+services : 
+    money-wise-client :    
+        volumes: 
+            - ../frontend/src:/app/src
